@@ -23,11 +23,11 @@ app.get('/app/rpsls', function(req, res) {
 });
 
 app.get('/app/rps/play', function(req, res) {
-    const shot = (req.query && req.query.shot) ? req.query.shot | req.body.shot;
+    const shot = (req.query && req.query.shot) ? req.query.shot : req.body.shot;
     res.status(200).send(rps(shot));
 });
 app.get('/app/rpsls/play', function(req, res) {
-    const shot = (req.query && req.query.shot) ? req.query.shot | req.body.shot;
+    const shot = (req.query && req.query.shot) ? req.query.shot : req.body.shot;
     res.status(200).send(rpsls(shot));
 });
 
